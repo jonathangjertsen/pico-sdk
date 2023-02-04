@@ -30,6 +30,8 @@ if (NOT ELF2UF2_FOUND)
                 CMAKE_ARGS "-DCMAKE_MAKE_PROGRAM:FILEPATH=${CMAKE_MAKE_PROGRAM}"
                 BUILD_ALWAYS 1 # force dependency checking
                 INSTALL_COMMAND ""
+                CMAKE_CACHE_ARGS
+                    "-DELF2UF2_USE_STATIC_LIBSTDCPP:STRING=${PICO_TOOLS_USE_STATIC_LIBSTDCPP}"
                 )
     endif()
 

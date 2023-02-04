@@ -44,3 +44,7 @@ if (MSVC)
     target_compile_options(pioasm PRIVATE "/std:c++latest")
 endif()
 
+if (PIOASM_USE_STATIC_LIBSTDCPP)
+    target_link_options(pioasm PRIVATE -static-libstdc++)
+endif()
+
